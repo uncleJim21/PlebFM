@@ -18,7 +18,7 @@ const connectDB =
     await mongoose.connect(connectString, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
-      serverApi: ServerApiVersion.v1,
+      //serverApi: ServerApiVersion.v1,
     } as ConnectOptions);
 
     return handler(req, res);
