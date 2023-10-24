@@ -17,6 +17,7 @@ export const getHost = async (
   slug: string,
   url?: string,
 ): Promise<Host | void> => {
+  console.log(`getHost url:${url} and slug:${slug}`);
   const res = await fetch(`https:/${url}/api/hosts/${slug}`, {
     method: 'GET',
     mode: 'no-cors',

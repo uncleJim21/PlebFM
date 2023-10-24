@@ -58,6 +58,9 @@ function PaymentScreen(props: {
   }, [pathname, props?.song?.name, props.totalBid]);
 
   useEffect(() => {
+    console.log(
+      `startPolling: ${startPolling} bolt11.hash:${bolt11.hash} pathname:${pathname}`,
+    );
     if (!startPolling || !bolt11.hash || !pathname) return;
 
     const getPaidStatus = async () => {
